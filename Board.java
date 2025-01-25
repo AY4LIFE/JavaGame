@@ -31,8 +31,18 @@ public static int[][] createBoard(int rows, int cols){
     }
     return board;
 }
+public static int rowCount(int[][] board){
+    return board.length;
+}
 
+public static int columnCount(int[][] board){
+    return board[0].length;
+}
+public static boolean valid(int[][] board, int rows, int columns){
+return true;
 
+    
+}
 
     //Students should enter their functions above here
     /**
