@@ -39,11 +39,32 @@ public static int columnCount(int[][] board){
     return board[0].length;
 }
 public static boolean valid(int[][] board, int rows, int columns){
-return true;
-
-    
+if ((rows > 0) && (rows < rowCount(board)) && (columns > 0) && (columns < columnCount(board))){
+    return true;
+}
+else{
+    return false;
+}
+}
+public static boolean canPlay(int[][] board, int column){
+    if (board[0][column] == 0){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
 
+public static int play(int[][] board, int column, int piece){
+    for (int i = board.length - 1; i >= 0; i--){
+        if (board[i][column] == 0){
+            board[i][column] = piece;
+            return i;
+        }
+    }
+    return -1;
+
+}
     //Students should enter their functions above here
     /**
      * Is there a win in given board in any row of board
